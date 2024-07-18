@@ -12,9 +12,7 @@
 //@import "../../../node_modules/jquery-bar-rating/dist/themes/fontawesome-stars";
 
 // family
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 @import 'variables';
 @import 'mixins';
@@ -44,9 +42,658 @@ p {
 
 // login
 .borderr {
-    border: 1px solid black;
+    border: 1px solid rgb(214, 12, 12);
 }
 
 
+.header{
+    background-color: #181414 ;
+    .row{
+        --bs-gutter-x: 0px;
+        --bs-gutter-y: 24px ;
+    }
+    .info{
+       position: relative;
+       .shape{
+        position: absolute;
+        top: 0;
+        left: 0;
+       }
+        h4{
+            margin-bottom: 10px;
+            @include textProperties($colorText: #707070,
+                $family: $family_1 , $weight: 600, $size: 24px , $lineHeight: 28.8px);
+            letter-spacing: 3%;
 
+        }
+        h3{
+            margin-bottom: 24px;
+            @include textProperties($colorText: #959595,
+                $family: $family_1 , $weight: 700, $size: 28px , $lineHeight: 33.6px);
+            letter-spacing: 3%;
+
+        }
+        h2{
+            margin-bottom: 33px;
+            @include textProperties($colorText:transparent,
+                $family: $family_1 , $weight: 900, $size: 70px , $lineHeight: 84px);
+            letter-spacing: 3%;
+            background: linear-gradient(to right, #984300, #FD6F00,#CA5900);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            
+
+        }
+        .social{
+            margin-bottom: 61px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            div{
+                min-width:40px;
+                min-height:40px;
+                border: 0.7px solid #575757;
+                border-radius: 50%;
+                @extend .flex-row;
+                background-color:rgba(255, 255, 255, 0.04);
+                a{
+                    line-height: 100%;
+                }
+            }
+        }
+        .btn{
+            margin-bottom: 80px;
+            display: flex;
+            align-items: center;
+            gap:24px;
+            padding: 0px;
+            button{
+                border-radius:8px;
+                padding:12px 40px;
+                @include textProperties($colorText:#fff,
+                $family: $family_1 , $weight: 700, $size: 20px , $lineHeight: 24px);
+                letter-spacing: 3%;
+
+            }
+            .btn1{
+                border: none;
+                background: linear-gradient(to right, #FD6F00, #E46400);
+
+            }
+            .btn2{
+                border:2px solid #959595 ;
+                color:#959595 ;
+                background-color: transparent;
+            }
+        }
+        .experiences{
+            border: none;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.04);
+            padding: 24px;
+            @extend .flex-row;
+            justify-content: center;
+            width: fit-content;
+           
+            gap: 30px;
+            .exp-1,.exp-2{
+                padding-right: 30px;
+                border-right: 1px solid #959595;
+            }
+            span{
+                display:block;
+                margin-bottom: 12px;
+                @include textProperties($colorText:#FD6F00,
+                $family: $family_1 , $weight: 800, $size: 24px , $lineHeight: 28px);
+                letter-spacing: 3%;
+
+            }
+            h4{
+                @include textProperties($colorText:#DFDFDF,
+                $family: $family_1 , $weight: 700, $size: 20px , $lineHeight: 24px);
+                letter-spacing: 3%;
+                margin-bottom: 6px;
+            }
+
+        }
+    }
+    .person{
+        img{
+            filter: grayscale(100%);
+        }
+    }
+}
+
+.services{
+    background-color: #181414 ;
+    .mini-services{
+        padding-top:150px ;
+        h2{
+            margin-bottom: 18px;
+            @include textProperties($colorText: #FEFEFE,
+                $family: $family_1 , $weight: 700, $size: 40px , $lineHeight: 48.8px);
+                letter-spacing: 3%;
+
+        }
+        .des-services{
+            margin-bottom: 80px;
+            @include textProperties($colorText: #707070,
+                $family: $family_1 , $weight: 500, $size: 20px , $lineHeight: 32.8px);
+                letter-spacing: 3%;
+        }
+        .cards{
+            --bs-gutter-x: 40px;
+            --bs-gutter-y: 40px ;
+            .card{
+                background-color:rgba(255, 255, 255, 0.04) ;
+                border-radius: 24px;
+                border: none;
+                padding: 34px 30.33px;
+                .img{
+                    width: 58.27px;
+                    height: 55.58px;
+                    margin: auto;
+                    margin-bottom:24.59px;
+                    
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                   
+                }
+                h3{
+                    margin-bottom:34px;
+                    @include textProperties($colorText: #FD6F00,
+                    $family: $family_1 , $weight: 700, $size: 24px , $lineHeight: 38.4px);
+                    letter-spacing: 3%;
+                }
+                p{ 
+                    @include textProperties($colorText: #575757,
+                    $family: $family_1 , $weight: 500, $size: 20px , $lineHeight:32px);
+                    letter-spacing: 3%; 
+                }
+
+            }
+        }
+
+    }
+}
+
+.about{
+    background-color: #181414 ;
+    .mini-about{
+        padding-top: 150px;
+        h2{
+           margin-bottom: 18px;
+           
+            @include textProperties($colorText: #FEFEFE,
+            $family: $family_1 , $weight: 700, $size: 40px , $lineHeight:48px);
+            letter-spacing: 3%; 
+        
+        }
+        p{
+            margin-bottom:40px ;
+            @include textProperties($colorText: #707070,
+            $family: $family_1 , $weight: 500, $size: 20px , $lineHeight:32px);
+            letter-spacing: 3%; 
+        
+        }
+        .row-about{
+            --bs-gutter-y: 34px ;
+        }
+        .card-about{
+            p{
+                margin-bottom: 40px;
+                @include textProperties($colorText: #959595,
+                $family: $family_1 , $weight: 500, $size: 20px , $lineHeight:38px);
+        
+            }
+            button{
+                border-radius:8px ;
+                background: linear-gradient(to right, #FD6F00, #E46400);
+                padding:12px 30px ;
+                border: none;
+                @include textProperties($colorText: #FFFFFF,
+                $family: $family_1 , $weight: 700, $size: 20px , $lineHeight:24px);
+                letter-spacing: 3%; 
+                span{
+                    margin-right:10px ;
+                }
+        
+
+            }
+        }
+        .person-about{
+            filter: grayscale(100%);
+        }
+
+    }
+}
+
+
+@media screen and (min-width: 991px) and (max-width: 1404px){
+    .header{
+        .info{
+             .shape{
+                 left: 50% !important;
+                 transform: translateX(-50%) !important;
+                 }
+             h4{
+                 font-size: 24px !important;
+                 line-height: 19.2px !important;
+             }
+             h3{
+                 font-size: 20px !important;
+                 line-height: 24px !important;
+             }
+             h2{
+                 margin-bottom: 30px !important;
+                 font-size: 50px !important;
+                 line-height: 60px !important;
+             }
+             .social{
+                 margin-bottom: 40px !important;
+             }
+             .btn{
+                 margin-bottom:50px !important ;
+                 button{
+                     padding:8px 20px !important;
+                     font-size: 14px !important;
+                     line-height: 16.8px !important;
+                     font-weight: 500px !important;
+                 }
+             }
+             .experiences{
+                 padding: 16px !important;
+                 gap: 14px !important;
+                 .exp-1,.exp-2{
+                     padding-right: 16px !important;
+                 }
+                 span{
+                     font-size: 20px !important;
+                     line-height: 24px !important;
+                 }
+                 h4{
+                     font-size: 16px !important;
+                     line-height: 19.2px !important;
+                 }
+             }
+        }
+     }
+     .about{
+        .card-about{
+            p{
+               
+                font-size:16px !important;
+                line-height: 30.4px !important;
+                font-weight: 400px !important;
+                display: -webkit-box !important;
+                -webkit-line-clamp: 10 !important;
+                -webkit-box-orient: vertical !important;
+                overflow: hidden !important;
+
+            }
+     }}
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 990px) {
+   
+    .header{
+       .info{
+          
+            .experiences{
+                padding: 24px !important;
+                gap: 30px !important;
+                margin: auto !important;
+                .exp-1,.exp-2{
+                    padding-right: 28px !important;
+                }
+                span{
+                    font-size: 24px !important;
+                    line-height: 24px !important;
+                }
+                h4{
+                    font-size: 20px !important;
+                    line-height: 19.2px !important;
+                }
+            }
+       }
+    }
+    .services{
+        .mini-services{
+            padding-top:100px !important ;
+            h2{
+                margin-bottom: 14px !important;
+               font-size: 40px !important;
+               line-height: 48.8px !important;
+    
+            }
+            .des-services{
+                margin-bottom: 24px !important;
+                font-size: 20px !important;
+                line-height: 32px !important;
+            }
+            .cards{
+                --bs-gutter-x: 25px !important;
+                --bs-gutter-y: 25px !important ;
+                .card{
+                    border-radius: 16px !important;
+                    padding: 30px 30px !important;
+                    .img{
+                        width: 58.3px !important;
+                        height: 55px !important;
+                        margin-bottom:24px !important;
+                    }   
+                    h3{
+                        margin-bottom:16px !important;
+                        font-size: 24px !important;
+                        line-height: 38px !important;
+
+                       
+                    } 
+                    p{ 
+                        font-size: 20px !important;
+                        line-height: 32px !important;
+                        display: -webkit-box !important;
+                        -webkit-line-clamp: 2 !important;
+                        -webkit-box-orient: vertical !important;
+                        overflow: hidden !important;
+                    }
+
+                }
+            }
+        }
+
+    }
+    
+
+}
+@media screen and (min-width: 400px) and (max-width: 600px) {
+   
+    .header{
+       .info{
+            .shape{
+                left: 50% !important;
+                transform: translateX(-50%) !important;
+                }
+            h4{
+                font-size: 16px !important;
+                line-height: 19.2px !important;
+            }
+            h3{
+                font-size: 20px !important;
+                line-height: 24px !important;
+            }
+            h2{
+                margin-bottom: 30px !important;
+                font-size: 50px !important;
+                line-height: 60px !important;
+            }
+            .social{
+                margin-bottom: 40px !important;
+            }
+            .btn{
+                margin-bottom:50px !important ;
+                button{
+                    padding:8px 20px !important;
+                    font-size: 14px !important;
+                    line-height: 16.8px !important;
+                    font-weight: 500px !important;
+                }
+            }
+            .experiences{
+                padding: 16px !important;
+                gap: 14px !important;
+                margin: auto !important;
+                .exp-1,.exp-2{
+                    padding-right: 16px !important;
+                }
+                span{
+                    font-size: 20px !important;
+                    line-height: 24px !important;
+                }
+                h4{
+                    font-size: 16px !important;
+                    line-height: 19.2px !important;
+                }
+            }
+       }
+    }
+    .services{
+        .mini-services{
+            padding-top:100px !important ;
+            h2{
+                margin-bottom: 14px !important;
+               font-size: 24px !important;
+               line-height: 28.8px !important;
+    
+            }
+            .des-services{
+                margin-bottom: 24px !important;
+                font-size: 16px !important;
+                line-height: 25.6px !important;
+            }
+            .cards{
+                --bs-gutter-x: 16px !important;
+                --bs-gutter-y: 24px !important ;
+                .card{
+                    border-radius: 16px !important;
+                    padding: 30px 17px !important;
+                    .img{
+                        width: 28.3px !important;
+                        height: 27px !important;
+                        margin-bottom:12.17px !important;
+                    }   
+                    h3{
+                        margin-bottom:16px !important;
+                        font-size: 20px !important;
+                        line-height: 32px !important;
+
+                       
+                    } 
+                    p{ 
+                        font-size: 16px !important;
+                        line-height: 25.6px !important;
+                        display: -webkit-box !important;
+                        -webkit-line-clamp: 2 !important;
+                        -webkit-box-orient: vertical !important;
+                        overflow: hidden !important;
+                    }
+
+                }
+            }
+        }
+
+    }
+    .about{
+        .mini-about{
+            padding-top: 100px !important;
+            h2{
+               font-size:24px !important;
+               line-height: 28.8px !important;
+
+             }
+             p{
+                margin-bottom: 70px !important;
+                font-size:16px !important;
+               line-height: 25.6px !important;
+
+             }
+             .card-about{
+                p{
+                    margin-bottom: 24px !important;
+                    font-size:16px !important;
+                    line-height: 30.4px !important;
+                    font-weight: 400px !important;
+                    display: -webkit-box !important;
+                    -webkit-line-clamp: 10 !important;
+                    -webkit-box-orient: vertical !important;
+                    overflow: hidden !important;
+
+                }
+                button{
+                    padding:10px 24px !important ;
+                    font-size:16px !important;
+                    line-height: 19.2px !important;
+                   
+                  
+                    span{
+                        margin-right:10px ;
+                    }
+            
+    
+                }
+                
+            }
+
+        }
+    }
+    
+
+}
+@media screen and (min-width: 0px) and (max-width: 399px) {
+   
+    .header{
+       .info{
+            
+            h4{
+                font-size: 16px !important;
+                line-height: 19.2px !important;
+            }
+            h3{
+                font-size: 20px !important;
+                line-height: 24px !important;
+            }
+            h2{
+                margin-bottom: 30px !important;
+                font-size: 35px !important;
+                line-height: 60px !important;
+            }
+            .social{
+                margin-bottom: 40px !important;
+            }
+            .btn{
+                margin-bottom:50px !important ;
+                button{
+                    padding:8px 20px !important;
+                    font-size: 14px !important;
+                    line-height: 16.8px !important;
+                    font-weight: 500px !important;
+                }
+            }
+            .experiences{
+                padding: 12px !important;
+                gap: 10px !important;
+                margin: auto !important;
+                .exp-1,.exp-2{
+                    padding-right: 13px !important;
+                }
+                span{
+                    font-size: 16px !important;
+                    line-height: 24px !important;
+                }
+                h4{
+                    font-size: 13px !important;
+                    line-height: 19.2px !important;
+                }
+            }
+       }
+    }
+    .services{
+        .mini-services{
+            padding-top:100px !important ;
+            h2{
+                margin-bottom: 14px !important;
+               font-size: 24px !important;
+               line-height: 28.8px !important;
+    
+            }
+            .des-services{
+                margin-bottom: 24px !important;
+                font-size: 16px !important;
+                line-height: 25.6px !important;
+                display: -webkit-box !important;
+                -webkit-line-clamp: 1 !important;
+                -webkit-box-orient: vertical !important;
+                overflow: hidden !important;
+            }
+            .cards{
+                --bs-gutter-x: 16px !important;
+                --bs-gutter-y: 24px !important ;
+                .card{
+                    border-radius: 16px !important;
+                    padding: 30px 17px !important;
+                    .img{
+                        width: 28.3px !important;
+                        height: 27px !important;
+                        margin-bottom:12.17px !important;
+                    }   
+                    h3{
+                        margin-bottom:16px !important;
+                        font-size: 20px !important;
+                        line-height: 32px !important;
+
+                       
+                    } 
+                    p{ 
+                        font-size: 16px !important;
+                        line-height: 25.6px !important;
+                        display: -webkit-box !important;
+                        -webkit-line-clamp: 2 !important;
+                        -webkit-box-orient: vertical !important;
+                        overflow: hidden !important;
+                    }
+
+                }
+            }
+        }
+
+    }
+    .about{
+        .mini-about{
+            padding-top: 100px !important;
+            h2{
+               font-size:24px !important;
+               line-height: 28.8px !important;
+
+             }
+             p{
+                margin-bottom: 70px !important;
+                font-size:16px !important;
+               line-height: 25.6px !important;
+
+             }
+             .card-about{
+                p{
+                    margin-bottom: 24px !important;
+                    font-size:16px !important;
+                    line-height: 30.4px !important;
+                    font-weight: 400px !important;
+                    display: -webkit-box !important;
+                    -webkit-line-clamp: 10 !important;
+                    -webkit-box-orient: vertical !important;
+                    overflow: hidden !important;
+
+                }
+                button{
+                    padding:10px 24px !important ;
+                    font-size:16px !important;
+                    line-height: 19.2px !important;
+                   
+                  
+                    span{
+                        margin-right:10px ;
+                    }
+            
+    
+                }
+                
+            }
+
+        }
+    }
+    
+
+}
 
