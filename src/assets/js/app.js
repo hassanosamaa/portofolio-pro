@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import 'bootstrap';
-import {test} from "./test";
+import {portofolio} from "./portofolio";
 
 
 $(document).ready(() => {
-    test();
+    portofolio();
 });
