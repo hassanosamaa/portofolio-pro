@@ -13,7 +13,7 @@
 
 // family
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 @import 'variables';
 @import 'mixins';
 // @import 'classes';
@@ -41,127 +41,201 @@ p {
 
 body{
     background-color: #181414 ;
+    overflow-x: hidden;
 }
 // login
 .borderr {
     border: 1px solid rgb(214, 12, 12);
 }
 
+header{
+   
+    background-color: #181414 ;
+    margin-top: 57px;
+    
+    .navbar {
+        padding: 0 !important
+    }
+    h1{
+        @extend .flex-row;
+        .navbar-brand{
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        
+    }
+    .navbar-nav{
+        gap:60px !important ;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        .nav-link {
+            padding: 0 !important;
+            @include textProperties($colorText: #959595,
+            $family: $family_1 , $weight: 500, $size: 20px , $lineHeight: 24px);
+            letter-spacing: 0.3px;
+            &:hover{
+                color: #FD6F00;
+            }
+
+        }
+        .nav-link.active{
+            font-weight: 700;
+            color: #FD6F00;
+        }
+    }
+    form{
+
+        button{
+            border: none;
+            border-radius:8px;
+            background: linear-gradient(to right, #FD6F00, #E46400);
+            padding:12px 40px ;
+            @include textProperties($colorText: #ffffff,
+            $family: $family_1 , $weight: 700, $size: 16px , $lineHeight: 19.2px);
+            letter-spacing: 0.3px;
+        }
+    }
+    .navbar-toggler:focus {
+        box-shadow: none !important;
+    }
+    
+}
 
 .header{
     background-color: #181414 ;
-    .row{
-        --bs-gutter-x: 0px;
-        --bs-gutter-y: 24px ;
-    }
-    .info{
-       position: relative;
-       .shape{
-        position: absolute;
-        top: 0;
-        left: 0;
-       }
-        h4{
-            margin-bottom: 10px;
-            @include textProperties($colorText: #707070,
-                $family: $family_1 , $weight: 600, $size: 24px , $lineHeight: 28.8px);
-            letter-spacing: 3%;
-
+    .mini-header{
+       
+        padding-top: 30px;
+        .row{
+            --bs-gutter-x: 0px;
+            --bs-gutter-y: 24px ;
         }
-        h3{
-            margin-bottom: 24px;
-            @include textProperties($colorText: #959595,
-                $family: $family_1 , $weight: 700, $size: 28px , $lineHeight: 33.6px);
-            letter-spacing: 3%;
-
-        }
-        h2{
-            margin-bottom: 33px;
-            @include textProperties($colorText:transparent,
-                $family: $family_1 , $weight: 900, $size: 70px , $lineHeight: 84px);
-            letter-spacing: 3%;
-            background: linear-gradient(to right, #984300, #FD6F00,#CA5900);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            
-
-        }
-        .social{
-            margin-bottom: 61px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            div{
-                min-width:40px;
-                min-height:40px;
-                border: 0.7px solid #575757;
-                border-radius: 50%;
-                @extend .flex-row;
-                background-color:rgba(255, 255, 255, 0.04);
-                a{
-                    line-height: 100%;
+        .info{
+           position: relative;
+           .shape{
+           
+            position: absolute;
+            top: 0;
+            left: 0;
+           }
+            h4{
+                margin-bottom: 10px;
+                @include textProperties($colorText: #707070,
+                    $family: $family_1 , $weight: 600, $size: 24px , $lineHeight: 28.8px);
+                letter-spacing: 0.3px;
+    
+            }
+            h3{
+                margin-bottom: 24px;
+                @include textProperties($colorText: #959595,
+                    $family: $family_1 , $weight: 700, $size: 28px , $lineHeight: 33.6px);
+                letter-spacing: 0.3px;
+    
+            }
+            h2{
+                width: fit-content;
+                margin-bottom: 33px;
+                @include textProperties($colorText:transparent,
+                    $family: $family_1 , $weight: 900, $size: 70px , $lineHeight: 84px);
+                letter-spacing: 0.3px;
+                background: linear-gradient(to right, #984300, #FD6F00,#CA5900);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                
+    
+            }
+            .social{
+                
+                cursor: pointer;
+                margin-bottom: 61px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                div{
+                    z-index: 999;
+                    min-width:40px;
+                    min-height:40px;
+                    border: 0.7px solid #575757;
+                    border-radius: 50%;
+                    @extend .flex-row;
+                    background-color:rgba(255, 255, 255, 0.04);
+                    &:hover{
+                        border: 0.7px solid transparent;
+                        background-color:#fd6e00a6;
+                    }
+                    a{
+                        line-height: 100%;
+                        
+                    }
                 }
             }
-        }
-        .btn{
-            margin-bottom: 80px;
-            display: flex;
-            align-items: center;
-            gap:24px;
-            padding: 0px;
-            button{
-                border-radius:8px;
-                padding:12px 40px;
-                @include textProperties($colorText:#fff,
-                $family: $family_1 , $weight: 700, $size: 20px , $lineHeight: 24px);
-                letter-spacing: 3%;
-
+            .btn{
+                
+                margin-bottom: 80px;
+                display: flex;
+                align-items: center;
+                gap:24px;
+                padding: 0px;
+                button{
+                    z-index: 999;
+                    border-radius:8px;
+                    padding:12px 40px;
+                    @include textProperties($colorText:#fff,
+                    $family: $family_1 , $weight: 700, $size: 20px , $lineHeight: 24px);
+                    letter-spacing: 0.3px;
+                    &:hover{
+                        border:2px solid transparent ;
+                        color:#fff ;
+                        background: linear-gradient(to right, #FD6F00, #E46400);
+                    }
+    
+                }
+                .btn1{
+                    border:2px solid transparent ;
+                    color:#fff ;
+                    background: linear-gradient(to right, #FD6F00, #E46400);
+                }
+                .btn2{
+                    border:2px solid #959595 ;
+                    color:#959595 ;
+                    background-color: transparent;
+                }
             }
-            .btn1{
+            .experiences{
                 border: none;
-                background: linear-gradient(to right, #FD6F00, #E46400);
-
-            }
-            .btn2{
-                border:2px solid #959595 ;
-                color:#959595 ;
-                background-color: transparent;
+                border-radius: 8px;
+                background-color: rgba(255, 255, 255, 0.04);
+                padding: 24px;
+                @extend .flex-row;
+                justify-content: center;
+                width: fit-content;
+               
+                gap: 30px;
+                .exp-1,.exp-2{
+                    padding-right: 30px;
+                    border-right: 1px solid #959595;
+                }
+                span{
+                    display:block;
+                    margin-bottom: 12px;
+                    @include textProperties($colorText:#FD6F00,
+                    $family: $family_1 , $weight: 800, $size: 24px , $lineHeight: 28px);
+                    letter-spacing: 0.3px;
+    
+                }
+                h4{
+                    @include textProperties($colorText:#DFDFDF,
+                    $family: $family_1 , $weight: 700, $size: 20px , $lineHeight: 24px);
+                    letter-spacing: 0.3px;
+                    margin-bottom: 6px;
+                }
+    
             }
         }
-        .experiences{
-            border: none;
-            border-radius: 8px;
-            background-color: rgba(255, 255, 255, 0.04);
-            padding: 24px;
-            @extend .flex-row;
-            justify-content: center;
-            width: fit-content;
-           
-            gap: 30px;
-            .exp-1,.exp-2{
-                padding-right: 30px;
-                border-right: 1px solid #959595;
+        .person{
+            img{
+                filter: grayscale(100%);
             }
-            span{
-                display:block;
-                margin-bottom: 12px;
-                @include textProperties($colorText:#FD6F00,
-                $family: $family_1 , $weight: 800, $size: 24px , $lineHeight: 28px);
-                letter-spacing: 3%;
-
-            }
-            h4{
-                @include textProperties($colorText:#DFDFDF,
-                $family: $family_1 , $weight: 700, $size: 20px , $lineHeight: 24px);
-                letter-spacing: 3%;
-                margin-bottom: 6px;
-            }
-
-        }
-    }
-    .person{
-        img{
-            filter: grayscale(100%);
         }
     }
 }
@@ -174,14 +248,14 @@ body{
             margin-bottom: 18px;
             @include textProperties($colorText: #FEFEFE,
                 $family: $family_1 , $weight: 700, $size: 40px , $lineHeight: 48.8px);
-                letter-spacing: 3%;
+                letter-spacing: 0.3px;
 
         }
         .des-services{
             margin-bottom: 80px;
             @include textProperties($colorText: #707070,
                 $family: $family_1 , $weight: 500, $size: 20px , $lineHeight: 32.8px);
-                letter-spacing: 3%;
+                letter-spacing: 0.3px;
         }
         .cards{
             --bs-gutter-x: 40px;
@@ -207,12 +281,12 @@ body{
                     margin-bottom:34px;
                     @include textProperties($colorText: #FD6F00,
                     $family: $family_1 , $weight: 700, $size: 24px , $lineHeight: 38.4px);
-                    letter-spacing: 3%;
+                    letter-spacing: 0.3px;
                 }
                 p{ 
                     @include textProperties($colorText: #575757,
                     $family: $family_1 , $weight: 500, $size: 20px , $lineHeight:32px);
-                    letter-spacing: 3%; 
+                    letter-spacing: 0.3px; 
                 }
 
             }
@@ -231,14 +305,14 @@ body{
            
             @include textProperties($colorText: #FEFEFE,
             $family: $family_1 , $weight: 700, $size: 40px , $lineHeight:48px);
-            letter-spacing: 3%; 
+            letter-spacing: 0.3px; 
         
         }
         p{
             margin-bottom:40px ;
             @include textProperties($colorText: #707070,
             $family: $family_1 , $weight: 500, $size: 20px , $lineHeight:32px);
-            letter-spacing: 3%; 
+            letter-spacing: 0.3px; 
         
         }
         .row-about{
@@ -258,7 +332,7 @@ body{
                 border: none;
                 @include textProperties($colorText: #FFFFFF,
                 $family: $family_1 , $weight: 700, $size: 20px , $lineHeight:24px);
-                letter-spacing: 3%; 
+                letter-spacing: 0.3px; 
                 span{
                     margin-right:10px ;
                 }
@@ -270,6 +344,86 @@ body{
         .person-about{
             filter: grayscale(100%);
         }
+
+       
+        .progress-bar-about{
+            column-gap: 69px;
+            row-gap:40px;
+            flex-wrap: wrap;
+            margin-top: 100px;
+          }
+     
+        .circular-progress{
+            position: relative;
+            height: 130px;
+            width: 130px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+        .circular-progress-1{
+            background: conic-gradient(#FD6F00 360deg,rgba(217, 217, 217, 0.2) 0deg);
+
+        }
+        .circular-progress-2{
+            background: conic-gradient(#FD6F00 360deg,rgba(217, 217, 217, 0.2) 0deg);
+        }
+        .circular-progress-3{
+            background: conic-gradient( rgba(217, 217, 217, 0.2) 0deg,
+            rgba(217, 217, 217, 0.2) 54deg
+            ,#FD6F00 54deg);
+            
+        }
+        .circular-progress-4{
+            background: conic-gradient( rgba(217, 217, 217, 0.2) 0deg,
+            rgba(217, 217, 217, 0.2) 144deg
+            ,#FD6F00 144deg);
+        }
+        .circular-progress-5{
+            background: conic-gradient( rgba(217, 217, 217, 0.2) 0deg,
+            rgba(217, 217, 217, 0.2) 108deg
+            ,#FD6F00 108deg);
+        }
+
+
+
+        .circular-progress::before{
+            content: "";
+            position: absolute;
+            height: 105px;
+            width: 105px;
+            border-radius: 50%;
+            background-color: #181414;
+        }
+        .progress-value{
+            position: relative;
+           
+        }
+        .percentage{
+            display: block;
+            margin-bottom: 8px;
+            @include textProperties($colorText: #FD6F00,
+            $family: $family_1 , $weight: 700, $size: 30px , $lineHeight:36px);
+
+
+        }
+        .skill{
+            @include textProperties($colorText: #959595,
+            $family: $family_1 , $weight: 700, $size: 24px , $lineHeight:28.8px);
+        }
+
+        .pro-gress{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-width:200px;
+        }
+          
+          
+         
         
 
          
@@ -287,7 +441,7 @@ body{
             margin-bottom: 40px;
             @include textProperties($colorText: #FEFEFE ,
             $family: $family_1 , $weight: 700, $size: 40px , $lineHeight: 48px);
-            letter-spacing: 3%;
+            letter-spacing: 0.3px;
 
         }
         .nav{
@@ -299,9 +453,14 @@ body{
             padding: 14px 40px !important;
             @include textProperties($colorText: #C6C6C6,
                 $family: $family_1 , $weight: 700, $size: 16px , $lineHeight: 25.6px);
-            letter-spacing: 3% !important;
+            letter-spacing: 0.3px !important;
             border-radius: 8px !important;
             background:rgba(255, 255, 255, 0.08) !important; 
+            &:hover{
+                @include textProperties($colorText: #FFFFFF,
+                $family: $family_1 , $weight: 700, $size: 16px , $lineHeight: 25.6px);
+                background:linear-gradient(to right, #FD6F00,#E46400) !important; 
+            }
         }
         .nav-link.active {
             @include textProperties($colorText: #FFFFFF,
@@ -313,6 +472,9 @@ body{
             border: none;
             overflow: hidden;
             background-color: rgba(255, 255, 255, 0.08);
+            a{
+                text-decoration: none;
+            }
            
             .img{
                 width: 100%;
@@ -333,14 +495,14 @@ body{
                    
                         @include textProperties($colorText: #C6C6C6,
                             $family: $family_1 , $weight: 700, $size: 16px , $lineHeight: 25.6px);
-                        letter-spacing: 3% !important;
+                        letter-spacing: 0.3px !important;
                       
                     
                 }
                 span{
                 @include textProperties($colorText: #959595,
                             $family: $family_1 , $weight: 700, $size: 16px , $lineHeight: 25.6px);
-                        letter-spacing: 3% !important;
+                        letter-spacing: 0.3px !important;
     
                 }
             }
@@ -376,13 +538,13 @@ body{
             margin-bottom: 18px;
             @include textProperties($colorText: #FEFEFE,
                 $family: $family_1 , $weight: 700, $size: 40px , $lineHeight: 48px);
-                letter-spacing: 3%;
+                letter-spacing: 0.3px;
         }
         p{
             margin-bottom: 50px;
             @include textProperties($colorText: #707070,
                 $family: $family_1 , $weight: 500, $size: 20px , $lineHeight: 32px);
-                letter-spacing: 3%;
+                letter-spacing: 0.3px;
         }
         form{
             .row{
@@ -398,11 +560,11 @@ body{
                 outline: none;
                 @include textProperties($colorText: #959595,
                         $family: $family_1 , $weight: 500, $size: 16px , $lineHeight: 25.6px);
-                        letter-spacing: 3%;
+                        letter-spacing: 0.3px;
                 &::placeholder{
                     @include textProperties($colorText: #959595,
                         $family: $family_1 , $weight: 500, $size: 16px , $lineHeight: 25.6px);
-                        letter-spacing: 3%;
+                        letter-spacing: 0.3px;
                 }
             }
             textarea{
@@ -417,13 +579,108 @@ body{
                 background-color: transparent;
                 @include textProperties($colorText: #959595,
                         $family: $family_1 , $weight: 700, $size: 20px , $lineHeight: 24px);
-                        letter-spacing: 3%;
+                        letter-spacing: 0.3px;
+                &:hover{
+                    color: #fff;
+                    border: 2px solid transparent;
+                    background: linear-gradient(to right, #FD6F00, #E46400);
+                }
+            }
+            
+        }
+    }
+}
+footer{
+    background-color:rgba(255, 255, 255, 0.04);
+    .mini-footer{
+        padding: 40px 0 24px;
+        h2{
+            margin-bottom: 50px;
+            @include textProperties($colorText: transparent,
+            $family: $family_2 , $weight: 700, $size: 30px , $lineHeight:39px);
+            letter-spacing: 0.3px; 
+            background: linear-gradient(to right, #FA6E00, #E60026);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        ul{
+            @extend .flex-row;
+            flex-wrap: wrap;
+            @extend .reset-ul;
+            margin-bottom: 50px;
+            gap: 60px;
+            a{
+                text-decoration: none;
+                @include textProperties($colorText: #959595,
+                $family: $family_1 , $weight: 500, $size: 20px , $lineHeight:24px);
+                letter-spacing: 0.3px; 
+                &:hover{
+                    text-decoration: underline;
+                }
+
+            }
+
+
+        }
+        .social{
+            margin-bottom: 50px;
+            @extend .flex-row;
+            gap:20px;
+            a{
+                width: 40px;
+                height: 40px;
+                text-decoration: none;
+                border-radius: 50%;
+                background-color:rgba(255, 255, 255, 0.04);
+                border: 1px solid #575757;
+                @extend .flex-row;
+                &:hover{
+                    border: 1px solid transparent;
+                    background-color:#fd6e00a6;
+                }
+                img{
+                    line-height: 100%;
+                }
             }
         }
+        .contact-footer{
+            @extend .flex-row;
+            flex-wrap: wrap;
+            gap:40px ;
+            margin-bottom: 50px;
+           
+            h3{
+                @include textProperties($colorText: #959595,
+            $family: $family_1 , $weight: 700, $size: 20px , $lineHeight:24px);
+            letter-spacing: 0.3px; 
+            }
+            span{
+                margin-right: 14px;
+            }
+        }
+        p{
+            width: fit-content;
+            margin: auto;
+            padding: 16px 120px 0 120px;
+            @include textProperties($colorText: #707070,
+            $family: $family_1 , $weight: 700, $size: 16px , $lineHeight:19.7px);
+            letter-spacing: 0.3px; 
+            border-top:1px solid #707070  ;
+        }
+        
     }
 }
 
 @media screen and (min-width: 991px) and (max-width: 1404px){
+   
+   header{
+    .navbar-nav{
+        gap:40px !important ;
+        .nav-link {
+            font-size:18px !important ;
+        }
+    }
+   }
     .header{
         .info{
              .shape{
@@ -497,10 +754,28 @@ body{
 }
 
 @media screen and (min-width: 601px) and (max-width: 990px) {
-   
+    header{
+        .navbar-nav{
+            gap:5px !important ;
+            .nav-link {
+                padding: 10px 20px !important;
+                font-size:18px !important ;
+            }
+        }
+       }
     .header{
+        .mini-header{
+            padding-top: 60px !important;
+        }
        .info{
-          
+             .shape{
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            }
+            h2{
+                margin: auto !important;
+                margin-bottom: 33px !important;
+            }
             .experiences{
                 padding: 24px !important;
                 gap: 30px !important;
@@ -591,7 +866,39 @@ body{
 }
 @media screen and (min-width: 400px) and (max-width: 600px) {
    
+
+    header{
+        margin-top: 33px !important;
+
+        form{
+
+            button{
+               
+                border-radius:6px !important;
+                padding:8px 16px !important ;
+                font-size: 14px !important;
+                font-weight: 500 !important;
+                line-height: 16.8px !important;
+            }
+        }
+        .navbar-toggler:focus {
+            box-shadow: none !important;
+        }
+        .navbar-nav{
+            gap:5px !important ;
+            .nav-link {
+                padding: 10px 20px !important;
+                font-size:16px !important ;
+            }
+        }
+       
+        
+    }
+
     .header{
+        .mini-header{
+            padding-top: 60px !important;
+        }
        .info{
             .shape{
                 left: 50% !important;
@@ -606,6 +913,7 @@ body{
                 line-height: 24px !important;
             }
             h2{
+                margin: auto !important;
                 margin-bottom: 30px !important;
                 font-size: 50px !important;
                 line-height: 60px !important;
@@ -727,6 +1035,31 @@ body{
                 
             }
 
+            .progress-bar-about{
+                column-gap: 10px !important;
+                margin-top: 70px !important;
+          }
+          .circular-progress{
+            height: 90px !important;
+            width: 90px !important;
+        }
+        .circular-progress::before{
+           
+            height: 75px !important;
+            width: 75px !important;
+           
+        }
+        .percentage{
+           
+           font-size: 24px !important;
+           line-height: 28.8px !important;
+
+        }
+        .skill{
+            font-size: 20px !important;
+            line-height: 24px !important;
+        }
+
         }
     }
     .portofolio{
@@ -795,14 +1128,78 @@ body{
                 }
             }
         }
+    footer{
+        h2{
+                margin-bottom: 30px !important;
+        }
+        ul{
+            margin-bottom:30px !important ;
+            gap: 24px !important;
+            a{
+                font-size: 16px !important;
+                line-height: 19.2px !important;
+            }
+        }
+        .social{
+            margin-bottom: 30px !important;
+        }
+        .contact-footer{
+           
+            gap:20px !important ;
+            margin-bottom: 30px !important;
+           
+            h3{
+                font-size: 16px !important;
+                line-height: 19.2px !important;
+            }
+            
+        }
+        p{
+            padding: 16px 36px 0 36px !important;
+            font-size: 14px !important;
+                line-height: 16.8px !important;
+        }
+
+    }
 
     
 
 }
 @media screen and (min-width: 0px) and (max-width: 399px) {
-   
+    header{
+        margin-top: 33px !important;
+
+        form{
+
+            button{
+               
+                border-radius:6px !important;
+                padding:8px 16px !important ;
+                font-size: 14px !important;
+                font-weight: 500 !important;
+                line-height: 16.8px !important;
+            }
+        }
+        .navbar-nav{
+            gap:5px !important ;
+            .nav-link {
+                padding: 10px 20px !important;
+                font-size:16px !important ;
+            }
+        }
+        
+       
+        
+    }
     .header{
+        .mini-header{
+            padding-top: 60px !important;
+        }
        .info{
+        .shape{
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            }
             
             h4{
                 font-size: 16px !important;
@@ -813,6 +1210,7 @@ body{
                 line-height: 24px !important;
             }
             h2{
+                margin: auto !important;
                 margin-bottom: 30px !important;
                 font-size: 35px !important;
                 line-height: 60px !important;
@@ -1008,6 +1406,39 @@ body{
                     }
                 }
             }
+        }
+    footer{
+            h2{
+                    margin-bottom: 30px !important;
+            }
+            ul{
+                margin-bottom:30px !important ;
+                gap: 24px !important;
+                a{
+                    font-size: 16px !important;
+                    line-height: 19.2px !important;
+                }
+            }
+            .social{
+                margin-bottom: 30px !important;
+            }
+            .contact-footer{
+               
+                gap:20px !important ;
+                margin-bottom: 30px !important;
+               
+                h3{
+                    font-size: 16px !important;
+                    line-height: 19.2px !important;
+                }
+                
+            }
+            p{
+                padding: 16px 36px 0 36px !important;
+                font-size: 14px !important;
+                    line-height: 16.8px !important;
+            }
+    
         }
 }
 

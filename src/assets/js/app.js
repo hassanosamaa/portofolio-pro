@@ -3,6 +3,8 @@ import 'bootstrap';
 import {portofolio} from "./portofolio";
 
 
+
 $(document).ready(() => {
     portofolio();
+
 });
