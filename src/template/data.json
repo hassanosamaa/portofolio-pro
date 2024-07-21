@@ -40,27 +40,32 @@
 			{
 				"imgPath": "assets/images/progress-1.svg",
 				"percentage": "100%",
-				"skill": "Figma"
+				"skill": "Figma",
+				"progressClass": "circular-progress-1"
 			},
 			{
 				"imgPath": "assets/images/progress-2.svg",
 				"percentage": "100%",
-				"skill": "Adobe XD"
+				"skill": "Adobe XD",
+				"progressClass": "circular-progress-2"
 			},
 			{
 				"imgPath": "assets/images/progress-3.svg",
 				"percentage": "85%",
-				"skill": "Adobe Photoshop"
+				"skill": "Adobe Photoshop",
+				"progressClass": "circular-progress-3"
 			},
 			{
 				"imgPath": "assets/images/progress-4.svg",
 				"percentage": "60%",
-				"skill": "Adobe Illustrator"
+				"skill": "Adobe Illustrator",
+				"progressClass": "circular-progress-4"
 			},
 			{
 				"imgPath": "assets/images/progress-5.svg",
 				"percentage": "70%",
-				"skill": "Adobe Premiere"
+				"skill": "Adobe Premiere",
+				"progressClass": "circular-progress-5"
 			}
 		],
 		"portofolio": [
