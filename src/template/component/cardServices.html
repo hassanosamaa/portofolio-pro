@@ -1,0 +1,11 @@
+{% macro card (imgPath,title,description) %}
+
+<div class="card ">
+    <div class="img">
+        <img src="{{imgPath}}" alt="user">
+    </div>
+    <h3>{{title}}</h3>
+    <p>{{description}}</p>
+</div>
+
+{% endmacro %}

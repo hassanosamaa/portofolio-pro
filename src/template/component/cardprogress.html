@@ -1,0 +1,12 @@
+{% macro card (imgPath,percentage,skill) %}
+
+<div class="pro-gress">
+    <div class="circular-progress circular-progress-1">
+        <span class="progress-value">
+            <img src="{{imgPath}}" alt="">
+        </span>
+    </div>
+    <span class="percentage">{{percentage}}</span>
+    <span class="skill">{{skill}}</span>
+</div>
+{% endmacro %}

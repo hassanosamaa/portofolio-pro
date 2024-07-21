@@ -1,5 +1,116 @@
 {
   "dataEn": {
-    "title": "This data from data-en.json file"
+    "title": "This data from data-en.json file",
+    "services":[
+      {
+        "imgPath":"assets/images/user.svg",
+        "title":"App Design",
+        "description":"Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit amet consectetur"
+      },
+      {
+        "imgPath":"assets/images/user.svg",
+        "title":"App Design",
+        "description":"Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit amet consectetur"
+      },
+      {
+        "imgPath":"assets/images/user.svg",
+        "title":"App Design",
+        "description":"Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit amet consectetur"
+      },
+      {
+        "imgPath":"assets/images/user.svg",
+        "title":"App Design",
+        "description":"Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit amet consectetur"
+      },
+      {
+        "imgPath":"assets/images/user.svg",
+        "title":"App Design",
+        "description":"Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit amet consectetur"
+      },
+      {
+        "imgPath":"assets/images/user.svg",
+        "title":"App Design",
+        "description":"Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit amet consectetur"
+      }
+    ]
+    ,
+    "progress":[
+      {
+        "imgPath":"assets/images/progress-1.svg",
+        "percentage":"100%",
+        "skill":"Figma"
+      },
+      {
+        "imgPath":"assets/images/progress-2.svg",
+        "percentage":"100%",
+        "skill":"Adobe XD"      
+      },
+      {
+        "imgPath":"assets/images/progress-3.svg",
+        "percentage":"85%",
+        "skill":"Adobe Photoshop"      
+      },
+      {
+        "imgPath":"assets/images/progress-4.svg",
+        "percentage":"60%",
+        "skill":"Adobe Illustrator"      
+      },
+      {
+        "imgPath":"assets/images/progress-5.svg",
+        "percentage":"70%",
+        "skill":"Adobe Premiere"      
+      }
+     
+    ]
+    ,
+    "portofolio":[
+      {
+        "imgPath":"assets/images/pro2.png",
+        "title":"Name Project",
+        "cate":"Categories"
+      },
+      {
+        "imgPath":"assets/images/pro1.png",
+       "title":"Name Project",
+        "cate":"Categories"
+      },
+      {
+        "imgPath":"assets/images/pro3.png",
+       "title":"Name Project",
+        "cate":"Categories"
+      },
+      {
+        "imgPath":"assets/images/pro1.png",
+       "title":"Name Project",
+        "cate":"Categories"
+      },
+      {
+        "imgPath":"assets/images/pro2.png",
+       "title":"Name Project",
+        "cate":"Categories" 
+      },
+      {
+        "imgPath":"assets/images/pro3.png",
+       "title":"Name Project",
+        "cate":"Categories"
+      },
+      {
+        "imgPath":"assets/images/pro2.png",
+       "title":"Name Project",
+        "cate":"Categories"
+      },
+      {
+        "imgPath":"assets/images/pro3.png",
+        "title":"Name Project",
+        "cate":"Categories" 
+      },
+      {
+        "imgPath":"assets/images/pro1.png",
+        "title":"Name Project",
+        "cate":"Categories"
+      }
+     
+    ]
+
   }
 }
