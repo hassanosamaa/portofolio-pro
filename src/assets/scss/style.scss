@@ -83,7 +83,7 @@ header{
             color: #FD6F00;
         }
     }
-    form{
+    .btn-nav{
 
         button{
             border: none;
@@ -97,6 +97,10 @@ header{
     }
     .navbar-toggler:focus {
         box-shadow: none !important;
+    }
+    .logo-img{
+        height: 23px;
+        
     }
     
 }
@@ -151,7 +155,7 @@ header{
                 display: flex;
                 align-items: center;
                 gap: 20px;
-                div{
+                a{
                     z-index: 999;
                     min-width:40px;
                     min-height:40px;
@@ -163,10 +167,7 @@ header{
                         border: 0.7px solid transparent;
                         background-color:#fd6e00a6;
                     }
-                    a{
-                        line-height: 100%;
-                        
-                    }
+                    
                 }
             }
             .btn{
@@ -586,6 +587,24 @@ header{
                     background: linear-gradient(to right, #FD6F00, #E46400);
                 }
             }
+            select{
+                margin-bottom: 0;
+            }
+            .select-parent{
+                margin-bottom: 30px;
+                position: relative;
+                .select-selected{
+                    appearance: none;
+                }
+                .arrow{
+                    position: absolute;
+                    top: 50%;
+                    right:15px;
+                    transform: translateY(-50%);
+
+
+                }
+            }
             
         }
     }
@@ -870,7 +889,7 @@ footer{
     header{
         margin-top: 33px !important;
 
-        form{
+        .btn-nav{
 
             button{
                
@@ -890,6 +909,10 @@ footer{
                 padding: 10px 20px !important;
                 font-size:16px !important ;
             }
+        }
+        .logo-img{
+            height: 19px !important;
+            
         }
        
         
@@ -1126,10 +1149,14 @@ footer{
                 .row{
                     --bs-gutter-x: 16px !important;
                 }
-                input ,select ,textarea{
+                input  ,textarea{
                     margin-bottom: 16px !important;
                     
                     }
+                .select-parent{
+                    margin-bottom: 16px !important;
+                   
+                }
                 }
             }
         }

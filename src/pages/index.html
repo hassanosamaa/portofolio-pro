@@ -1,5 +1,5 @@
 {% extends "layout.html" %}
-
+{% set title = 'Home' %}
 
 {% import 'component/cardServices.html' as card %}
 {% import 'component/cardprogress.html' as card2 %}
@@ -20,26 +20,26 @@
                        <h3>Mahmood Fazile</h3>
                        <h2>UI/UX designer</h2>
                        <div class="social justify-content-center justify-content-lg-start">
-                            <div>
+                        
                                 <a href="#">    
                                   <img src="assets/images/social1.svg" alt="insta">
                                 </a>
-                            </div>
-                            <div>
+                            
+                        
                                 <a href="#">    
                                     <img src="assets/images/social2.svg" alt="linkedin">
                                   </a>
-                            </div>
-                            <div>
+                            
+                        
                                 <a href="#">    
                                     <img src="assets/images/social3.svg" alt="web">
                                   </a>
-                            </div>
-                            <div>
+                            
+                          
                                 <a href="#">    
                                     <img src="assets/images/social4.svg" alt="be">
                                   </a>
-                            </div>
+                           
                            
                        </div>
                        <div class="btn justify-content-center justify-content-lg-start">
@@ -306,14 +306,17 @@
                             <div class="col-11 col-lg-5 text-center  text-lg-end">
                                 <div>
                                     <input class="form-control"   id="emailInput" type="text" placeholder="Email">
-                                    <select id="Service" class="select-selected">
-                                        <option value="volvo" selected>Service of Interest</option>
-                                        <option value="saab">Saab</option>
-                                        <option value="vw">VW</option>
-                                        <option value="audi" >Audi</option>
-                                      </select>
+                                    <div class="select-parent">
+                                        <img class="arrow" src="assets/images/Arrow.svg" alt="">
+                                        <select id="Service" class="select-selected">
+                                            <option value="volvo" selected>Service of Interest</option>
+                                            <option value="saab">Saab</option>
+                                            <option value="vw">VW</option>
+                                            <option value="audi" >Audi</option>
+                                          </select>
+                                    </div>
                                     <textarea  id="detailsInput" type="text" placeholder="Project Details..."></textarea>
-                                    <button>Send</button>
+                                    <button type="submit">Send</button>
                                 </div>
                             </div>
                         </div>
